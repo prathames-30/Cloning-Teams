@@ -1,9 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
-/* eslint-disable react-hooks/exhaustive-deps */
 import { Button } from '@material-ui/core'
 import { AccountCircle, ForumRounded } from '@material-ui/icons'
-import {Link} from "react-router-dom"
 import {useHistory} from "react-router-dom"
 
 const LogoutButton = () => {
