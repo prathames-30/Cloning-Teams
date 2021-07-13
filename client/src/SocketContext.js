@@ -4,7 +4,7 @@ import Peer from 'simple-peer'
 
 const SocketContext = createContext();
 
-const socket = io.connect('/')
+const socket = io('http://localhost:5000')
 
 const ContextProvider = ({ children }) => {
     
