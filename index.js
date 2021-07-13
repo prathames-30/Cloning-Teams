@@ -1,19 +1,10 @@
 const express = require("express")
 const app = express()
 const server = require("http").createServer(app)
-const cors = require("cors")
-// Cors is a package which we reqyuire for handling 
-// cross origin requests.
 const PORT = process.env.PORT || 5000
 
-const io = require("socket.io")(server, {
-    cors: {
-        origin: '*',
-        methods: ["GET","POST"]
-    }
-})
+const io = require("socket.io")(server)
 
-app.use(cors())
 
 const root = path.join(__dirname, 'client', 'build');
 // Have Node serve the files for our built React app
