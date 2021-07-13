@@ -15,10 +15,13 @@ const io = require("socket.io")(server, {
 
 app.use(cors())
 
-app.get("/", (req,res) => {
-    res.send('Running server')
-
-})
+const root = path.join(__dirname, 'client', 'build');
+// Have Node serve the files for our built React app
+app.use(express.static(root));
+// All other GET requests not handled before will return our React app
+app.get("*", (req, res) => {
+	res.sendFile('index.html', { root });
+});
 //Server side connection
 io.on('connection',(socket) => {
 
