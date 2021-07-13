@@ -12,7 +12,7 @@ const Chat = (props) => {
     const didMountRef = useRef(false)
     const { name, call } = useContext(SocketContext)
     const [chat, setChat] = useState(null)
-    const [headers, setHeaders] = useState({
+    const [headers, _] = useState({
         'Project-ID': projectID,
         'User-Name': name,
         'User-Secret': 'Qazwsx123%',
