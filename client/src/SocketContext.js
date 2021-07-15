@@ -4,7 +4,7 @@ import Peer from 'simple-peer'
 
 const SocketContext = createContext();
 
-const socket = io('/')
+const socket = io('https://cloning-teams-app.herokuapp.com/')
 
 const ContextProvider = ({ children }) => {
     
